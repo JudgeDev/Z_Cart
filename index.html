@@ -1,0 +1,132 @@
+<!-- DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" -->
+<html>
+
+<head>
+    <title>A Cool Store</title>
+    <link media="screen" href="widget.css" type="text/css" rel="stylesheet">
+    <style type="text/css">
+        /* CSS for my store can take advantage of HTML store classes */
+        .price {
+            font-weight: bold;
+        }
+
+        .title {
+            font-family: sans-serif;
+            font-size: larger;
+        }
+
+        .button {
+            color: #CCCCCC;
+            background-color: #222266;
+            padding: 3;
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Claim 1</h1>
+    1. A computer-implemented method, comprising:
+    receiving, with a user computing device (102), a web page document from a first party containing a mark-up code segment pointing to a second party (502-506);<br />
+    using the mark-up code segment to obtain from the second party aprogram for generating a shopping application for the web page document (506-509) and loading said program;<br />
+    using the loaded program to parse the web page document to identify tags of items for sale (509);<br />
+    using the loaded program and information within identified tags to alter the web page document to include at least one event handler (509);<br />
+    and <br />
+    upon triggering of at least one said event handler by a user, using the loaded program to:<br />
+    analyze part of the web page document on the basis of information within the triggered at least one event handler to determine information relating to at least one item for sale; and <br />
+    generate a shopping cart which contains the information relating to said at least one item for display to the user (510).
+    
+    <h1>Shop with [Board 3.5.01's] JS HTML store!</h1>
+    <h3>Try this: open Firebug and edit the content of the page,
+        add the item to the cart, and see the properties change!</h3>
+    <!-- div class="cbg-widget"></div -->
+    <table>
+        <tr>
+            <td class="item">
+                <img class="image" src="doughnut.jpg" /><br />
+                <span class="title">Hundred Dollar Doughnut</span>
+                <span class="price">$100</span>
+                <select class="item-size">
+                    <option>small</option>
+                    <option>big</option>
+                </select><br />
+                <div class="item-desc">A doughnut worth one hundred dollars.</div>
+                <input type="button" class="google-cart-add" value="add to cart" />
+            </td>
+            <td class="item">
+                <img class="image" src="blintz.jpg" /><br />
+                <span class="title">Not Quite Ten Dollar Blintzes</span>
+                <span class="price">$9.99</span>
+                <div class="item-info">Blintzes worth a bit less than ten
+                    bucks.</div>
+                How Many? <input type="text" class="google-cart-quantity" value="9" size="2" />
+                Extra Crispy: <input type="checkbox" class="item-burnt" value="yes" />
+                <a href="" class="google-cart-add">add to cart</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="item">
+                <input type="image" class="image" src="salmon.jpg" /><br />
+                <span class="title">One Penny Pastry</span>
+                <span class="price">$.01</span>
+                <div class="item-desc">It's because it isn't very good.</div>
+                <ul>Qualities include:<li class="item-inside">fishy</li>
+                    <li class="item-outside">flakey</li>
+                </ul>
+                How Fishy?
+                <input type="radio" name="fish" class="item-fish" value="salmon" />Salmon
+                <input type="radio" name="fish" class="item-fish" value="halibut" />Halibut
+                <button class="google-cart-add">add to cart</button>
+            </td>
+            <td class="item">
+                <img class="image" src="mix.jpg" /><br />
+                <span class="title">Baker's Dozen</span>
+                <span class="price">$13</span>
+                <div class="item-info">One more than twelve.</div>
+                choose your meats!
+                <select class="item-meats" multiple>
+                    <option>salami</option>
+                    <option>ham</option>
+                    <option>turkey</option>
+                    <option>beef</option>
+
+                </select>
+                <span class="google-cart-add button">add to cart</span>
+            </td>
+        </tr>
+    </table>
+
+    <!--CART SECTION-->
+    <h1>Cart</h1>
+    <div class="cart-row">
+        <span class="cart-item">ITEM</span>
+        <span class="cart-item">PRICE</span>
+        <span class="cart-item">QUANTITY</span>
+    </div>
+    <div class="cart-items">
+        <div class="cart-row">
+            <img src="doughnut.jpg" width="100" height="100">
+            <span>Hundred Dollar Doughnut</span>
+            <span class="cart-price">$100</span>
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn-remove" type="button">REMOVE</button>
+        </div>
+        <div class="cart-row">
+            <img src="blintz.jpg" width="100" height="100">
+            <span>Hundred Dollar Doughnut</span>
+            <span class="cart-price">$9.99</span>
+            <input class="cart-quantity-input" type="number" value="2">
+            <button class="btn-remove" type="button">REMOVE</button>
+        </div>
+    </div>
+    <div class="cart-total">
+        <strong>TOTAL</strong>
+        <span class="cart-total-price">$109.99</span>
+    </div>
+    <button class="btn-purchase" type="button">PURCHASE</button>
+
+</body>
+
+
+</html>
+<script id="cbg-script" type="text/javascript" src="cart-v1.js?mid=848813048561667"></script>
